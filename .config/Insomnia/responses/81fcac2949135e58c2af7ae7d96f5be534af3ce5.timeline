@@ -1,0 +1,142 @@
+[
+	{
+		"name": "TEXT",
+		"value": "Preparing request to http://localhost:3001/api/tags",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Current time is 2021-05-25T06:28:05.820Z",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Using libcurl/7.73.0 OpenSSL/1.1.1g zlib/1.2.11 brotli/1.0.7 zstd/1.4.9 libidn2/2.3.1 libssh2/1.9.0 nghttp2/1.41.0",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Using default HTTP version",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Disable timeout",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable automatic URL encoding",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable SSL validation",
+		"timestamp": 1621924085820
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable cookie sending with jar of 0 cookies",
+		"timestamp": 1621924085822
+	},
+	{
+		"name": "TEXT",
+		"value": "Connection 23 seems to be dead!\n",
+		"timestamp": 1621924085830
+	},
+	{
+		"name": "TEXT",
+		"value": "Closing connection 23\n",
+		"timestamp": 1621924085830
+	},
+	{
+		"name": "TEXT",
+		"value": "Hostname in DNS cache was stale, zapped\n",
+		"timestamp": 1621924085830
+	},
+	{
+		"name": "TEXT",
+		"value": "  Trying ::1:3001...\n",
+		"timestamp": 1621924085831
+	},
+	{
+		"name": "TEXT",
+		"value": "Connected to localhost (::1) port 3001 (#24)\n",
+		"timestamp": 1621924085832
+	},
+	{
+		"name": "HEADER_OUT",
+		"value": "GET /api/tags HTTP/1.1\r\nHost: localhost:3001\r\nUser-Agent: insomnia/2021.3.0\r\nContent-Type: application/json\r\nAccept: */*\r\nContent-Length: 23\r\n\r\n",
+		"timestamp": 1621924085832
+	},
+	{
+		"name": "DATA_OUT",
+		"value": "{\n \"tag_name\": \"Test\"\n}",
+		"timestamp": 1621924085832
+	},
+	{
+		"name": "TEXT",
+		"value": "upload completely sent off: 23 out of 23 bytes\n",
+		"timestamp": 1621924085832
+	},
+	{
+		"name": "TEXT",
+		"value": "Mark bundle as not supporting multiuse\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "HTTP/1.1 200 OK\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "X-Powered-By: Express\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Content-Type: application/json; charset=utf-8\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Content-Length: 2265\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "ETag: W/\"8d9-iaarhPGpf60CF/7jdzCOBh7Z1YU\"\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Date: Tue, 25 May 2021 06:28:05 GMT\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Connection: keep-alive\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Keep-Alive: timeout=5\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "\r\n",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 2.2 KB chunk",
+		"timestamp": 1621924085870
+	},
+	{
+		"name": "TEXT",
+		"value": "Connection #24 to host localhost left intact\n",
+		"timestamp": 1621924085871
+	}
+]

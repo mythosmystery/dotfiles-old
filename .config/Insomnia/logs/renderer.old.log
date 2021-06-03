@@ -1,0 +1,25 @@
+[2021-05-30 09:30:54.298] [info]  [db] Initialized DB client
+[2021-05-30 09:30:54.529] [info]  [plugin] Loaded /home/florida/.config/Insomnia/plugins/insomnia-plugin-theme-palenight
+[2021-05-30 09:30:56.218] [info]  [FileSystemDriver] Initialized in "/home/florida/.config/Insomnia/version-control"
+[2021-05-30 09:30:56.288] [info]  [ga] Event Activity, Change, debug
+[2021-05-30 09:30:56.289] [info]  [ga] Page /debug
+[2021-05-30 09:31:33.640] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 09:31:34.013] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=400
+[2021-05-30 09:33:42.810] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 09:33:43.178] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 09:45:00.750] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 09:45:01.068] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 09:55:40.315] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 09:55:40.603] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 09:55:45.749] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 09:55:45.860] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 10:02:48.403] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 10:02:48.516] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 10:06:50.735] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 10:06:50.964] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 10:43:30.891] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 10:43:31.070] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 10:45:48.651] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 10:45:48.874] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
+[2021-05-30 10:47:41.585] [info]  [network] Sending req=req_6770599072994cddb2bd17e0d141bf35 env=n/a
+[2021-05-30 10:47:41.790] [info]  [network] Response succeeded req=req_6770599072994cddb2bd17e0d141bf35 status=200
