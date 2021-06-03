@@ -48,7 +48,11 @@ keys = [
              lazy.shutdown(),
              desc='Shutdown Qtile'
              ),
-                 ### Switch focus to specific monitor (out of three)
+         Key(["control", "shift"], "e",
+             lazy.spawn("emacsclient -c -a emacs"),
+             desc='Doom Emacs'
+             ),
+         ### Switch focus to specific monitor (out of three)
          Key([mod], "w",
              lazy.to_screen(0),
              desc='Keyboard focus to monitor 1'
@@ -139,7 +143,41 @@ keys = [
              desc='Toggle between split and unsplit sides of stack'
              ),
          # Emacs programs launched using the key chord CTRL+e followed by 'key'
-                 # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
+         KeyChord(["control"],"e", [
+             Key([], "e",
+                 lazy.spawn("emacsclient -c -a 'emacs'"),
+                 desc='Launch Emacs'
+                 ),
+             Key([], "b",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(ibuffer)'"),
+                 desc='Launch ibuffer inside Emacs'
+                 ),
+             Key([], "d",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(dired nil)'"),
+                 desc='Launch dired inside Emacs'
+                 ),
+             Key([], "i",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(erc)'"),
+                 desc='Launch erc inside Emacs'
+                 ),
+             Key([], "m",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(mu4e)'"),
+                 desc='Launch mu4e inside Emacs'
+                 ),
+             Key([], "n",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(elfeed)'"),
+                 desc='Launch elfeed inside Emacs'
+                 ),
+             Key([], "s",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(eshell)'"),
+                 desc='Launch the eshell inside Emacs'
+                 ),
+             Key([], "v",
+                 lazy.spawn("emacsclient -c -a 'emacs' --eval '(+vterm/here nil)'"),
+                 desc='Launch vterm inside Emacs'
+                 )
+         ]),
+         # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
          KeyChord([mod], "p", [
              Key([], "e",
                  lazy.spawn("./dmscripts/dmconf"),
@@ -181,13 +219,13 @@ keys = [
 ]
 
 group_names = [("WWW", {'layout': 'monadtall'}),
-               ("DEV", {'layout': 'monadtall'}),
-               ("SYS", {'layout': 'monadtall'}),
-               ("DOC", {'layout': 'monadtall'}),
-               ("VBOX", {'layout': 'monadtall'}),
-               ("CHAT", {'layout': 'monadtall'}),
-               ("MUS", {'layout': 'monadtall'}),
-               ("VID", {'layout': 'monadtall'}),
+               ("TERM", {'layout': 'monadtall'}),
+               ("FILE", {'layout': 'monadtall'}),
+               ("CODE", {'layout': 'monadtall'}),
+               ("VIM", {'layout': 'monadtall'}),
+               ("ZOOM", {'layout': 'monadtall'}),
+               ("SLAC", {'layout': 'monadtall'}),
+               ("EDIT", {'layout': 'monadtall'}),
                ("GFX", {'layout': 'floating'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -340,27 +378,7 @@ def init_widgets_list():
                        background = colors[4],
                        padding = 5
                        ),
-              widget.TextBox(
-                       text = '',
-                       background = colors[4],
-                       foreground = colors[5],
-                       padding = 0,
-                       fontsize = 37
-                       ),
-              widget.TextBox(
-                       text = " 🌡 TEMP NOT SHOWN ",
-                       padding = 2,
-                       foreground = colors[2],
-                       background = colors[5],
-                       fontsize = 11
-                       ),
-              # widget.ThermalSensor(
-              #          foreground = colors[2],
-              #          background = colors[5],
-              #          threshold = 90,
-              #          padding = 5
-              #          ),
-              widget.TextBox(
+            widget.TextBox(
                        text='',
                        background = colors[5],
                        foreground = colors[4],
@@ -409,25 +427,7 @@ def init_widgets_list():
                        padding = 0,
                        fontsize = 37
                        ),
-              widget.TextBox(
-                       text = " ₿",
-                       padding = 0,
-                       foreground = colors[2],
-                       background = colors[4],
-                       fontsize = 12
-                       ),
-              widget.BitcoinTicker(
-                       foreground = colors[2],
-                       background = colors[4],
-                       padding = 5
-                       ),
-              widget.TextBox(
-                       text = '',
-                       background = colors[4],
-                       foreground = colors[5],
-                       padding = 0,
-                       fontsize = 37
-                       ),
+              
               widget.TextBox(
                       text = " Vol:",
                        foreground = colors[2],
@@ -483,8 +483,8 @@ def init_widgets_screen2():
     return widgets_screen2                 # Monitor 2 will display all widgets in widgets_list
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
             Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
 
 if __name__ in ["config", "__main__"]:
@@ -561,4 +561,4 @@ def start_once():
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "qTile"
+wmname = "LG3D"
