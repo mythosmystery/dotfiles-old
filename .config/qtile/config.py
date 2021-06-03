@@ -364,13 +364,6 @@ def init_widgets_list():
                        foreground = colors[0],
                        background = colors[0]
                        ),
-              widget.TextBox(
-                       text = '',
-                       background = colors[0],
-                       foreground = colors[4],
-                       padding = 0,
-                       fontsize = 37
-                       ),
              widget.Net(
                        interface = "enp6s0",
                        format = '{down} ↓↑ {up}',
@@ -378,14 +371,7 @@ def init_widgets_list():
                        background = colors[4],
                        padding = 5
                        ),
-            widget.TextBox(
-                       text='',
-                       background = colors[5],
-                       foreground = colors[4],
-                       padding = 0,
-                       fontsize = 37
-                       ),
-              widget.TextBox(
+             widget.TextBox(
                        text = " ⟳",
                        padding = 2,
                        foreground = colors[2],
