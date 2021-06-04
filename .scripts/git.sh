@@ -1,0 +1,4 @@
+git add .;
+git commit -m "$1";
+git push;
+echo "Done with commit message $1";
