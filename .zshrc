@@ -10,8 +10,8 @@ export VISUAL="nvim"
 export MANPAGER="nvim -c 'set ft=man' -"
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=5000
-SAVEHIST=1000
+HISTSIZE=20000
+SAVEHIST=10000
 setopt autocd extendedglob
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -25,6 +25,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
+
 alias vim="nvim"
 alias c="clear"
 alias ls="exa -l"
