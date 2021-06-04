@@ -1,6 +1,10 @@
 # iTerm2 Material Design - Palenight theme for Alacritty
 # Source : https://github.com/JonathanSpeek/palenight-iterm2
 #
+font:
+  normal:
+    family:
+      "MesloLGS NF"
 padding:
   x: 20
   y: 20
