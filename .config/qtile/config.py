@@ -180,23 +180,23 @@ keys = [
          # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
          KeyChord([mod], "p", [
              Key([], "e",
-                 lazy.spawn("./dmscripts/dmconf"),
+                 lazy.spawn("dm-confedit"),
                  desc='Choose a config file to edit'
                  ),
              Key([], "i",
-                 lazy.spawn("./dmscripts/dmscrot"),
+                 lazy.spawn("dm-scrot"),
                  desc='Take screenshots via dmenu'
                  ),
              Key([], "k",
-                 lazy.spawn("./dmscripts/dmkill"),
+                 lazy.spawn("dm-kill"),
                  desc='Kill processes via dmenu'
                  ),
              Key([], "l",
-                 lazy.spawn("./dmscripts/dmlogout"),
+                 lazy.spawn("dm-logout"),
                  desc='A logout menu'
                  ),
              Key([], "m",
-                 lazy.spawn("./dmscripts/dman"),
+                 lazy.spawn("dman"),
                  desc='Search manpages in dmenu'
                  ),
              Key([], "o",
