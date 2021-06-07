@@ -1,0 +1,5 @@
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+echo ".cfg" >> .gitignore
+git clone --bare git@github.com:mythosmystery/dotfiles.git $HOME/.cfg
+config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \ xargs -I{} sudo rm -r {}
+config status
