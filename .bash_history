@@ -52,3 +52,6 @@ pikaur -Ss powerlevel
 pikaur -S ttf-meslo-nerd-font-powerlevel10k
 pikaur -S starship
 zsh
+zsh
+nvim .zshrc
+/usr/bin/nvim .zshrc

@@ -10,7 +10,8 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 
-mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
+mod = "mod1"
+#mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"                             # My terminal of choice
 
 keys = [
@@ -20,10 +21,13 @@ keys = [
              desc='Launches My Terminal'
              ),
          Key([mod, "shift"], "Return",
-             lazy.spawn("dmenu_run -p 'Run: '"),
+             lazy.spawn("./.config/rofi/bin/launcher_ribbon"),
              # lazy.spawn("rofi -show drun -config ~/.config/rofi/themes/dt-dmenu.rasi -display-drun \"Run: \" -drun-display-format \"{name}\""),
              desc='Run Launcher'
              ),
+        Key([mod, "shift"], "x",
+            lazy.spawn('./.config/rofi/bin/powermenu'),
+            desc='Powermenu'),
         Key([mod], "b",
             lazy.spawn("google-chrome-stable"),
             desc='Launch Chrome'
@@ -195,9 +199,9 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
 
 layout_theme = {"border_width": 2,
-                "margin": 8,
-                "border_focus": "e1acff",
-                "border_normal": "1D2330"
+                "margin": 9,
+                "border_focus": "c792ea",
+                "border_normal": "292D3E"
                 }
 
 layouts = [
@@ -237,14 +241,14 @@ layouts = [
     layout.Floating(**layout_theme)
 ]
 
-colors = [["#282c34", "#282c34"], # panel background
+colors = [["#444267", "#444267"], # panel background
           ["#3d3f4b", "#434758"], # background for current screen tab
-          ["#ffffff", "#ffffff"], # font color for group names
-          ["#ff5555", "#ff5555"], # border line color for current tab
-          ["#74438f", "#74438f"], # border line color for 'other tabs' and color for 'odd widgets'
-          ["#4f76c7", "#4f76c7"], # color for the 'even widgets'
-          ["#e1acff", "#e1acff"], # window name
-          ["#ecbbfb", "#ecbbfb"]] # backbround for inactive screens
+          ["#c792ea", "#c792ea"], # font color for group names
+          ["#c792ea", "#c792ea"], # border line color for current tab
+          ["#444267", "#444267"], # border line color for 'other tabs' and color for 'odd widgets'
+          ["#676e95", "#676e95"], # color for the 'even widgets'
+          ["#89ddff", "#89ddff"], # window name
+          ["#676e95", "#676e95"]] # backbround for inactive screens
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
@@ -325,17 +329,17 @@ def init_widgets_list():
                        background = colors[0]
                        ),
              widget.Net(
-                       interface = "enp6s0",
+                       interface = "wlan0",
                        format = '{down} ↓↑ {up}',
                        foreground = colors[2],
-                       background = colors[4],
+                       background = colors[5],
                        padding = 5
                        ),
              widget.TextBox(
                        text = " ⟳",
                        padding = 2,
                        foreground = colors[2],
-                       background = colors[4],
+                       background = colors[5],
                        fontsize = 14
                        ),
               widget.CheckUpdates(
@@ -344,32 +348,32 @@ def init_widgets_list():
                        display_format = "{updates} Updates",
                        foreground = colors[2],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-                       background = colors[4]
+                       background = colors[5]
                        ),
               widget.TextBox(
                        text = '',
-                       background = colors[4],
-                       foreground = colors[5],
+                       background = colors[5],
+                       foreground = colors[4],
                        padding = 0,
                        fontsize = 37
                        ),
               widget.TextBox(
                        text = " 🖬",
                        foreground = colors[2],
-                       background = colors[5],
+                       background = colors[4],
                        padding = 0,
                        fontsize = 14
                        ),
               widget.Memory(
                        foreground = colors[2],
-                       background = colors[5],
+                       background = colors[4],
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
                        padding = 5
                        ),
               widget.TextBox(
                        text='',
-                       background = colors[5],
-                       foreground = colors[4],
+                       background = colors[4],
+                       foreground = colors[5],
                        padding = 0,
                        fontsize = 37
                        ),
@@ -378,6 +382,7 @@ def init_widgets_list():
                       text = " Vol:",
                        foreground = colors[2],
                        background = colors[5],
+                       mouse_callbacks = {'Button1':lambda: qtile.cmd_spawn("pavucontrol")},
                        padding = 0
                        ),
               widget.Volume(
@@ -430,8 +435,8 @@ def init_widgets_screen2():
 
 def init_screens():
     return [Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20))]
 
 if __name__ in ["config", "__main__"]:
     screens = init_screens()
@@ -490,6 +495,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(title='Qalculate!'),        # qalculate-gtk
     Match(wm_class='kdenlive'),       # kdenlive
     Match(wm_class='pinentry-gtk-2'), # GPG key password entry
+    Match(wm_class='pavucontrol'),
+    Match(wm_class='lxappearance')
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
