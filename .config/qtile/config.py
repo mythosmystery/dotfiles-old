@@ -272,7 +272,7 @@ def init_widgets_list():
               widget.Image(
                        filename = "~/.config/qtile/icons/python-white.png",
                        scale = "False",
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)}
+                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("./.config/rofi/bin/launcher_ribbon")}
                        ),
              widget.Sep(
                        linewidth = 0,
@@ -421,6 +421,13 @@ def init_widgets_list():
                        background = colors[5],
                        format = "%A, %B %d - %H:%M "
                        ),
+              widget.TextBox(
+                        text = '⏻',
+                        background = colors[4],
+                        foreground = colors[2],
+                        padding = 15,
+                        mouse_callbacks = {'Button1':lambda: qtile.cmd_spawn("./.config/rofi/bin/powermenu")}
+              )
               ]
     return widgets_list
 

@@ -55,3 +55,20 @@ zsh
 zsh
 nvim .zshrc
 /usr/bin/nvim .zshrc
+zsh
+zsh
+zsh
+zsh
+vim
+zsh
+vim
+tmux kill-server
+vim
+vim
+vim -a
+nvim -a
+nvim -u
+nvim -h
+vim -u
+vim -u 
+vim
