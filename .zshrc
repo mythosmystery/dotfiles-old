@@ -4,6 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+export PATH=$HOME/.config/rofi/bin:$PATH
 export TERM="alacritty"
 export EDITOR="nvim"
 export VISUAL="nvim"
