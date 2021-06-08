@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "project-02-habit-tracker"
+		},
+		{
+			"path": "gt-atl-fsf-pt-02-2021-u-c"
+		},
+		{
+			"path": "ecommerce-backend"
+		},
+		{
+			"path": "team-builder"
+		},
+		{
+			"path": "readme-generator"
+		},
+		{
+			"path": "portfolio-v3"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
