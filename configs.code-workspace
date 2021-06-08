@@ -1,7 +1,28 @@
 {
 	"folders": [
 		{
-			"path": "../.config"
+			"path": ".config/nvim"
+		},
+		{
+			"path": ".config/alacritty"
+		},
+		{
+			"path": ".config/fish"
+		},
+		{
+			"path": ".config/picom"
+		},
+		{
+			"path": ".config/rofi"
+		},
+		{
+			"path": ".config/vifm"
+		},
+		{
+			"path": ".config/polybar"
+		},
+		{
+			"path": ".config/qtile"
 		}
 	]
 }
