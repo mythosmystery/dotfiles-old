@@ -51,6 +51,10 @@ if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
 fi
 
+if [ -d "$HOME/.config/rofi/bin" ] ;
+  then PATH="$HOME/.config/rofi/bin:$PATH"
+fi
+
 ### CHANGE TITLE OF TERMINALS
 case ${TERM} in
   xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
