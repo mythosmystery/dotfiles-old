@@ -6,4 +6,8 @@
     border-alt: #34324a;
     selected: #717cb470;
     urgent: #aaff72;
+    accent:           #c972ea;
+    background-light: #444267;
+    on:               #89ddff;
+    off:              #f2f2f2ab;            
 }
