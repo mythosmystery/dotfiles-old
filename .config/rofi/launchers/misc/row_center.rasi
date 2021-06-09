@@ -71,7 +71,7 @@ entry {
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search Applications";
-    padding:                        -0.10% 0% 0% 0%;
+    padding:                        -0.25% 0% 0% 0%;
     blink:                          true;
 }
 
@@ -89,7 +89,7 @@ inputbar {
 
 listview {
     background-color:               @background-alt;
-    columns:                        12;
+    columns:                        10;
     lines:	                        2;
     spacing:                        0%;
     cycle:                          false;
@@ -116,7 +116,7 @@ element {
 }
 
 element-icon {
-    size:                           80px;
+    size:                           64px;
     border:                         0px;
 }
 

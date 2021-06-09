@@ -60,7 +60,7 @@ inputbar {
     background-color:               @background-bar;
     text-color:                     @foreground;
     expand:                         false;
-	border:							0.1%;
+	border:							1px;
     border-radius:                  6px;
 	border-color:					@accent;
     margin:                         0% 30% 0% 30%;
@@ -96,7 +96,7 @@ element {
 }
 
 element-icon {
-    size:                           81px;
+    size:                           48px;
     border:                         0px;
 }
 

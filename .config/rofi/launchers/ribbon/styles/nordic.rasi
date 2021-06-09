@@ -2,8 +2,8 @@
     background:                     #475C7Bff;
     background-alt:                 #475C7Bff;
     foreground:                     #ffffffcc;
-    border:               			#c972ea;
-    border-alt:               		#89ddff;
+    border:               			#FDBB6Dff;
+    border-alt:               		#DA717Fff;
     selected:               		#685E79ff;
     urgent:                         #DA4453FF;
 }

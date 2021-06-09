@@ -28,7 +28,7 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  50px;
-	width:							50%;
+	width:							55%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -102,7 +102,7 @@ element {
 }
 
 element-icon {
-    size:                           64px;
+    size:                           49px;
     border:                         1%;
     border-color:                  	@se;
     border-radius:                  15px;

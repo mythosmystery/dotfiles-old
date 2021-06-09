@@ -50,7 +50,7 @@ inputbar {
     border:                  		0% 0.2% 0% 0.2%;
     border-radius:                  0% 100% 100% 0%;
     border-color:                  	@border;
-    margin:                         0% 59.3% 0% 0%;
+    margin:                         0% 49% 0% 0%;
     padding:                        0.5%;
     position:                       center;
 }
@@ -68,7 +68,7 @@ mainbox {
     background-color:               @background;
     children:                       [ inputbar, listview ];
     spacing:                        5%;
-    padding:                        32.50% 0% 0% 13.25%;
+    padding:                        32.50% 0% 0% 9%;
 }
 
 element {
@@ -83,7 +83,7 @@ element-text {
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         6.5% 4% 13.5% 4%;
+    margin:                         6.5% 4% 16.5% 4%;
 }
 
 element normal.urgent,

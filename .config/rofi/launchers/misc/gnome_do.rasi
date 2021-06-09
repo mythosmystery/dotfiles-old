@@ -79,7 +79,7 @@ window {
 	border:							0px;
 	border-color:					@border;
     border-radius:                  25px;
-	width:							26%;
+	width:							30%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -141,11 +141,11 @@ element {
     text-color:                     @foreground;
     orientation:                    vertical;
     border-radius:                  0%;
-    padding:                        2.5% 0% 2.5% 0%;
+    padding:                        3.5% 0% 3.5% 0%;
 }
 
 element-icon {
-    size:                           128px;
+    size:                           95px;
     border:                         0px;
 }
 

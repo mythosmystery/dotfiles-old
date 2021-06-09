@@ -87,7 +87,7 @@ inputbar {
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
-	border:							0.1%;
+	border:							1px;
     border-radius:                  4px;
 	border-color:					@accent;
     margin:                         0% 0% 0% 0%;
@@ -119,11 +119,11 @@ element {
     text-color:                     @foreground;
     orientation:                    horizontal;
     border-radius:                  0%;
-    padding:                        0.5%;
+    padding:                        1%;
 }
 
 element-icon {
-    size:                           32px;
+    size:                           24px;
     border:                         0px;
 }
 
@@ -137,7 +137,7 @@ element-text {
 element selected {
     background-color:               @background-bar;
     text-color:                     @foreground;
-	border:							0.1%;
+	border:							1px;
     border-radius:                  4px;
     border-color:                  	@accent;
 }

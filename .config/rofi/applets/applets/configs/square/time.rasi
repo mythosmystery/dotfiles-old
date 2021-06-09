@@ -91,7 +91,7 @@ element-text {
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0;
-    margin:                         5px 10px 50px 10px;
+    margin:                         5px 10px 35px 10px;
 }
 
 element normal.urgent,

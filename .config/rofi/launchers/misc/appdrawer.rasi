@@ -104,7 +104,7 @@ mainbox {
 	border-color:					@accent;
     children:                       [ inputbar, listview ];
     spacing:                       	2%;
-    padding:                        5% 1.5% 0% 1.5%;
+    padding:                        6% 1.5% 0% 1.5%;
 }
 
 element {
@@ -116,7 +116,7 @@ element {
 }
 
 element-icon {
-    size:                           64px;
+    size:                           49px;
     border:                         0px;
 }
 
