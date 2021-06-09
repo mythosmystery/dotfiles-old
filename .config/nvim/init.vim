@@ -42,6 +42,8 @@ colorscheme material
 
 let g:lightline = {'colorscheme': 'material_vim'}
 
+hi Normal guibg=NONE ctermbg=NONE
+
 map <C-o> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1

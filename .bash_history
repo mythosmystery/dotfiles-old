@@ -84,3 +84,9 @@ tmux kill-server
 zsh
 zsj
 zsh
+man ls
+vim
+zsh
+vim
+c
+vim
