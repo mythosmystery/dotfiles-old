@@ -9,9 +9,13 @@ from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
+from socket import gethostname
 
-mod = "mod1"
-# mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
+hostname = gethostname()
+if hostname == 'arch':
+    mod = "mod1"
+elif hostname == 'florida-x551ca':
+    mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"                             # My terminal of choice
 
 keys = [
