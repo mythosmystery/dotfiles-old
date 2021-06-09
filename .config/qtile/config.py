@@ -188,8 +188,8 @@ group_names = [("WWW", {'layout': 'monadtall'}),
                ("CODE", {'layout': 'monadtall'}),
                ("VIM", {'layout': 'monadtall'}),
                ("ZOOM", {'layout': 'monadtall'}),
-               ("SLAC", {'layout': 'monadtall'}),
-               ("EDIT", {'layout': 'monadtall'}),
+               ("API", {'layout': 'monadtall'}),
+               ("MISC", {'layout': 'monadtall'}),
                ("GFX", {'layout': 'floating'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
