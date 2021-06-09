@@ -20,6 +20,7 @@
 		}
 	],
 	"settings": {
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "portfolio-v3"
 	}
 }
