@@ -36,7 +36,7 @@ keys = [
         lazy.spawn("code"),
         desc='Launch oss-code'
         ),
-    Key([mod], "f",
+    Key([mod], "t",
         lazy.spawn("thunar"),
         desc='Launch ThunarFM'
         ),
@@ -59,10 +59,6 @@ keys = [
         lazy.shutdown(),
         desc='Shutdown Qtile'
         ),
-    Key(["control", "shift"], "e",
-        lazy.spawn("emacsclient -c -a emacs"),
-        desc='Doom Emacs'
-        ),
     # Switch focus to specific monitor (out of three)
     Key([mod], "w",
         lazy.to_screen(0),
@@ -84,15 +80,6 @@ keys = [
     Key([mod], "comma",
         lazy.prev_screen(),
         desc='Move focus to prev monitor'
-        ),
-    # Treetab controls
-    Key([mod, "shift"], "h",
-        lazy.layout.move_left(),
-        desc='Move up a section in treetab'
-        ),
-    Key([mod, "shift"], "l",
-        lazy.layout.move_right(),
-        desc='Move down a section in treetab'
         ),
     # Window controls
     Key([mod], "j",
@@ -153,33 +140,6 @@ keys = [
         lazy.layout.toggle_split(),
         desc='Toggle between split and unsplit sides of stack'
         ),
-    # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
-    KeyChord([mod], "p", [
-             Key([], "e",
-                 lazy.spawn("dm-confedit"),
-                 desc='Choose a config file to edit'
-                 ),
-             Key([], "i",
-                 lazy.spawn("dm-scrot"),
-                 desc='Take screenshots via dmenu'
-                 ),
-             Key([], "k",
-                 lazy.spawn("dm-kill"),
-                 desc='Kill processes via dmenu'
-                 ),
-             Key([], "l",
-                 lazy.spawn("dm-logout"),
-                 desc='A logout menu'
-                 ),
-             Key([], "m",
-                 lazy.spawn("dm-man"),
-                 desc='Search manpages in dmenu'
-                 ),
-             Key([], "p",
-                 lazy.spawn("passmenu"),
-                 desc='Retrieve passwords with dmenu'
-                 )
-             ])
 ]
 
 group_names = [("WWW", {'layout': 'monadtall'}),
@@ -207,8 +167,8 @@ layout_theme = {"border_width": 2,
                 }
 
 layouts = [
-    # layout.MonadWide(**layout_theme),
-    # layout.Bsp(**layout_theme),
+    layout.MonadWide(**layout_theme),
+    layout.Bsp(**layout_theme),
     #layout.Stack(stacks=2, **layout_theme),
     # layout.Columns(**layout_theme),
     # layout.RatioTile(**layout_theme),
@@ -220,26 +180,6 @@ layouts = [
     layout.Max(**layout_theme),
     layout.Stack(num_stacks=2),
     layout.RatioTile(**layout_theme),
-    layout.TreeTab(
-        font="Ubuntu",
-        fontsize=10,
-        sections=["FIRST", "SECOND", "THIRD", "FOURTH"],
-        section_fontsize=10,
-        border_width=2,
-        bg_color="1c1f24",
-        active_bg="c678dd",
-        active_fg="000000",
-        inactive_bg="a9a1e1",
-        inactive_fg="1c1f24",
-        padding_left=0,
-        padding_x=0,
-        padding_y=5,
-        section_top=10,
-        section_bottom=20,
-        level_shift=8,
-        vspace=3,
-        panel_width=200
-    ),
     layout.Floating(**layout_theme)
 ]
 
