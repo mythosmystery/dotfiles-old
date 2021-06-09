@@ -8,9 +8,9 @@
  */
 
 configuration {
-	font:							"Noto Sans Bold 10";
+	font:							"MesloLGS NF 10";
     show-icons:                     true;
-	icon-theme: 					"Papirus";
+	icon-theme: 					"Palenight";
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;

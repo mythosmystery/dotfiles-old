@@ -21,7 +21,7 @@ keys = [
         desc='Launches My Terminal'
         ),
     Key([mod, "shift"], "Return",
-        lazy.spawn("./.config/rofi/bin/launcher_ribbon"),
+        lazy.spawn("./.config/rofi/bin/launcher_misc"),
         # lazy.spawn("rofi -show drun -config ~/.config/rofi/themes/dt-dmenu.rasi -display-drun \"Run: \" -drun-display-format \"{name}\""),
         desc='Run Launcher'
         ),
@@ -287,7 +287,7 @@ def init_widgets_list():
         ),
         widget.GroupBox(
             font="Ubuntu Bold",
-            fontsize=9,
+            fontsize=10,
             margin_y=3,
             margin_x=0,
             padding_y=5,
