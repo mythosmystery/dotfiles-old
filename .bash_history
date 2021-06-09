@@ -72,3 +72,15 @@ nvim -h
 vim -u
 vim -u 
 vim
+c
+zsh
+zsh
+vim
+c
+zsh
+vim
+vim
+tmux kill-server
+zsh
+zsj
+zsh

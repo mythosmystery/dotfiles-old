@@ -8,6 +8,7 @@ font:
 padding:
   x: 20
   y: 20
+background_opacity: 0.7
 #
 colors:
   # Default colors
