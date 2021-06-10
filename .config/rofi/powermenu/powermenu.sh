@@ -107,7 +107,9 @@ case $chosen in
 				bspc quit
 			elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
 				i3-msg exit
-			fi
+			else
+				xdotool key alt+shift+q
+      		fi
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
 			exit 0
         else
