@@ -90,3 +90,8 @@ zsh
 vim
 c
 vim
+sudo pacman -S lightdm lightdm-gtk-greeter
+sudo systemctl disable gdm
+sudo systemctl enable lightdm
+reboot
+zsh

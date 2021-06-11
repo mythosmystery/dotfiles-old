@@ -146,15 +146,15 @@ keys = [
         ),
 ]
 
-group_names = [("WWW", {'layout': 'monadtall'}),
+group_names = [("CHROM", {'layout': 'monadtall'}),
                ("TERM", {'layout': 'monadtall'}),
-               ("FILE", {'layout': 'monadtall'}),
+               ("FILES", {'layout': 'monadtall'}),
                ("CODE", {'layout': 'monadtall'}),
                ("VIM", {'layout': 'monadtall'}),
                ("ZOOM", {'layout': 'monadtall'}),
-               ("API", {'layout': 'monadtall'}),
+               ("MUSIC", {'layout': 'monadtall'}),
                ("MISC", {'layout': 'monadtall'}),
-               ("GFX", {'layout': 'floating'})]
+               ("REAPER", {'layout': 'floating'})]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
@@ -468,7 +468,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='kdenlive'),       # kdenlive
     Match(wm_class='pinentry-gtk-2'),  # GPG key password entry
     Match(wm_class='pavucontrol'),
-    Match(wm_class='lxappearance')
+    Match(wm_class='lxappearance'),
+    Match(wm_class='REAPER')
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"

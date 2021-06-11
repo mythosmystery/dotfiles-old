@@ -26,6 +26,9 @@
 		},
 		{
 			"path": ".config/kitty"
+		},
+		{
+			"path": ".config/openbox"
 		}
 	]
 }
