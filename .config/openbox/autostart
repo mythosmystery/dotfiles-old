@@ -1,6 +1,0 @@
-polybar &
-picom -f &
-nitrogen --restore &
-dunst &
-pavucontrol & 
-nm-applet &
