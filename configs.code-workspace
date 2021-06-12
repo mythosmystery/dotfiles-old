@@ -32,6 +32,9 @@
 		},
 		{
 			"path": "Downloads/dotfiles"
+		},
+		{
+			"path": ".themes"
 		}
 	]
 }
