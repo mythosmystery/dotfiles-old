@@ -98,3 +98,5 @@ zsh
 launcher_ribbon
 c
 zsh
+zsh -e powermenu
+zsh -c powermenu

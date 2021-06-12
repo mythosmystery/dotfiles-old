@@ -16,7 +16,7 @@
 #
 #xfce-mcs-manager &
 
-$HOME/.config/polybar/launch.sh --forest
+$HOME/.config/polybar/launch.sh
 plank &
 picom -f &
 nitrogen --restore &
