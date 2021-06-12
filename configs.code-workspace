@@ -19,9 +19,6 @@
 			"path": ".config/vifm"
 		},
 		{
-			"path": ".config/polybar"
-		},
-		{
 			"path": ".config/qtile"
 		},
 		{

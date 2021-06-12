@@ -95,3 +95,6 @@ sudo systemctl disable gdm
 sudo systemctl enable lightdm
 reboot
 zsh
+launcher_ribbon
+c
+zsh
