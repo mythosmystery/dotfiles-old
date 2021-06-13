@@ -23,11 +23,9 @@ super + shift + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + shift + c
+mod4 + shift + c
 	bspc node -c
-alt + shift + c
-	bspc node -c
-
+	
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
@@ -119,15 +117,15 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 
-# APPLICATION KEYBINDINGS (Super + Alt + Key)
+# APPLICATION KEYBINDINGS (super + Alt + Key)
 
 # terminal emulator
-alt + Return
+mod4 + Return
 	alacritty
-alt + shift + Return
+mod4 + shift + Return
 	./.config/rofi/bin/launcher_ribbon
-alt + shift + x 
+mod4 + shift + x 
 	./.config/rofi/bin/powermenu
-alt + c
+mod4 + c
 	code
 

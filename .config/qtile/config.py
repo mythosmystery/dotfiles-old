@@ -11,11 +11,12 @@ from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 from socket import gethostname
 
-hostname = gethostname()
-if hostname == 'arch':
-    mod = "mod1"
-elif hostname == 'florida-x551ca':
-    mod = "mod4"                                     # Sets mod key to SUPER/WINDOWS
+# hostname = gethostname()
+# if hostname == 'arch':
+#     mod = "mod1"
+# elif hostname == 'florida-x551ca':Q
+#     mod = "mod4"
+mod = "mod4"                               # Sets mod key to SUPER/WINDOWS
 myTerm = "alacritty"                             # My terminal of choice
 
 keys = [

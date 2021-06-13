@@ -10,12 +10,12 @@
 # https://github.com/baskerville/bspwm
 
 #### AUTOSTART ####
-sxhkd &
+sxhkd -c "~/.config/sxhkd/sxhkdrc" &
 picom -f &
 nitrogen --restore &
 ./.config/polybar/launch.sh
 dunst &
-pavucontrol &
+pasystray &
 nm-applet &
 
 #### MONITORS ####
