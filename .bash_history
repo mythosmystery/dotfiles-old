@@ -100,3 +100,14 @@ c
 zsh
 zsh -e powermenu
 zsh -c powermenu
+zsh -e powermenu
+zsh -c powermenu
+config-s
+vim .local/bin/config-s
+c
+vim .local/bin/config-s
+chmod +x .local/bin/config-s
+c
+config-s
+c
+config-s

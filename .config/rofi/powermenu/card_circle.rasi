@@ -18,7 +18,7 @@ configuration {
 	sidebar-mode: 					false;
 }
 
-@import "styles/colors.rasi"
+@import "../palenight.rasi"
 
 window {
     transparency:                   "real";

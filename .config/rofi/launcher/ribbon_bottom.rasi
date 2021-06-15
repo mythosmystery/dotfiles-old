@@ -8,9 +8,10 @@
  */
 
 configuration {
-	font:							"FantasqueSansMono Nerd Font 12";
-    show-icons:                     false;
-	icon-theme: 					"Papirus";
+	font:							"FantasqueSansMono Nerd Font 10";
+    show-icons:                     true;
+	icon-theme: 					"Palenight";
+    display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
@@ -24,9 +25,11 @@ window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-    border-radius:                  0px;
-    height:                         30%;
-    width:                          54%;
+	border:							0% 0% 3% 0%;
+	border-color:					@border;
+    border-radius:                  0% 0% 0% 0%;
+    height:                         73.5%;
+    width:                          55%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -34,68 +37,80 @@ window {
 
 prompt {
     enabled: 						true;
-    padding:                        0.5% 0.5% 0.5% 0%;
-	background-color: 				@background-alt;
+	padding: 						0% 1% 0% 0%;
+	background-color: 				@background;
 	text-color: 					@foreground;
+	font:							"FantasqueSansMono Nerd Font 12";
 }
 
-textbox-prompt-colon {
-	expand: 						false;
-	str: 							"System |";
-	background-color: 				@background-alt;
-	text-color: 					@foreground;
-    padding:                        0.5% 0.5% 0.5% 0%;
+entry {
+    background-color:               @background;
+    text-color:                     @foreground;
+    placeholder-color:              @foreground;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search Applications";
+    padding:                        0.15% 0% 0% 0%;
+    blink:                          true;
 }
 
 inputbar {
-	children: 						[ textbox-prompt-colon, prompt ];
-    background-color:               @background-alt;
+	children: 						[ prompt, entry ];
+    background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
-    border:                  		0% 0% 0% 0.2%;
+	border:							0% 0% 0.3% 0%;
     border-radius:                  0% 0% 0% 0%;
-    border-color:                  	@border;
-    margin:                         0% 21.3% 0% 0%;
-    padding:                        0.5%;
+	border-color:					@border-alt;
+    margin:                         0% 0% 0% 0%;
+    padding:                        1%;
     position:                       center;
 }
 
 listview {
     background-color:               @background;
-    margin:                         0% 0% 0% 0%;
-    spacing:                        2%;
-    cycle:                          true;
+    columns:                        6;
+    spacing:                        1%;
+    cycle:                          false;
     dynamic:                        true;
-    layout:                         horizontal;
+    layout:                         vertical;
 }
 
 mainbox {
     background-color:               @background;
+	border:							0% 0% 3% 0%;
+    border-radius:                  0% 0% 0% 0%;
+	border-color:					@border-alt;
     children:                       [ inputbar, listview ];
-    spacing:                        3.5%;
-    padding:                        4% 0% 0% 2%;
+    spacing:                       	2%;
+    padding:                        2.5% 2% 2.5% 2%;
 }
 
 element {
-    background-color:               @background-alt;
+    background-color:               @background;
     text-color:                     @foreground;
-    orientation:                    horizontal;
+    orientation:                    vertical;
     border-radius:                  0%;
+    padding:                        2% 0% 2% 0%;
+}
+
+element-icon {
+    size:                           49px;
+    border:                         0px;
 }
 
 element-text {
-	font:							"feather 32";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         4.5% 2.7% 8.5% 2.7%;
+    margin:                         0.5% 1% 0% 1%;
 }
 
 element normal.urgent,
 element alternate.urgent {
     background-color:               @urgent;
     text-color:                     @foreground;
-    border-radius:                  0.2%;
+    border-radius:                  1%;
 }
 
 element normal.active,
@@ -107,9 +122,9 @@ element alternate.active {
 element selected {
     background-color:               @selected;
     text-color:                     @foreground;
-    border:                  		0% 0% 0% 0.2%;
-    border-radius:                  0%;
-    border-color:                  	@border;
+	border:							0% 0% 0.3% 0%;
+    border-radius:                  0% 0% 0% 0%;
+    border-color:                  	@border-alt;
 }
 
 element selected.urgent {
