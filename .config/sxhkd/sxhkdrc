@@ -123,9 +123,9 @@ mod4 + {Left,Down,Up,Right}
 mod4 + Return
 	alacritty -e zsh
 mod4 + shift + Return
-	./.config/rofi/bin/launcher_ribbon
+	launcher
 mod4 + shift + x 
-	./.config/rofi/bin/powermenu
+	powermenu
 mod4 + c
 	code
 mod4 + shift + b
