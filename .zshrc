@@ -4,7 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-export PATH=$HOME/.config/rofi/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin
 export TERM="alacritty"
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -36,6 +36,4 @@ alias la="exa -al"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
-alias gitsend="~/.scripts/git.sh"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias config-add="~/.scripts/configAdd.sh"
