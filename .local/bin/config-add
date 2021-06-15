@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+config add "$1"
+config commit -a -m "updated $1"
+config push

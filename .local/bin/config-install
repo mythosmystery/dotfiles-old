@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 echo ".cfg" >> .gitignore
 git clone --bare git@github.com:mythosmystery/dotfiles.git $HOME/.cfg
