@@ -111,3 +111,14 @@ c
 config-s
 c
 config-s
+config
+config-s
+config-s
+zsh
+chmod +x .local/bin/config-s
+config-s
+config-s
+vim .bashrc
+c
+config status
+zsh
