@@ -1,6 +1,6 @@
 /* Message Dialog */
 
-@import "styles/colors.rasi"
+@import "../palenight.rasi"
 
 * {
     background-color:       @background;

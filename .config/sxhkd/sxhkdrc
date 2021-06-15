@@ -123,9 +123,9 @@ mod4 + {Left,Down,Up,Right}
 mod4 + Return
 	alacritty -e zsh
 mod4 + shift + Return
-	launcher
+	~/.local/bin/launcher
 mod4 + shift + x 
-	powermenu
+	~/.local/bin/powermenu
 mod4 + c
 	code
 mod4 + shift + b

@@ -26,12 +26,12 @@ keys = [
         desc='Launches My Terminal'
         ),
     Key([mod, "shift"], "Return",
-        lazy.spawn("./.config/rofi/bin/launcher_ribbon"),
+        lazy.spawn(".local/bin/launcher"),
         # lazy.spawn("rofi -show drun -config ~/.config/rofi/themes/dt-dmenu.rasi -display-drun \"Run: \" -drun-display-format \"{name}\""),
         desc='Run Launcher'
         ),
     Key([mod, "shift"], "x",
-        lazy.spawn('./.config/rofi/bin/powermenu'),
+        lazy.spawn('.local/bin/powermenu'),
         desc='Powermenu'),
     Key([mod], "b",
         lazy.spawn("google-chrome-stable"),
@@ -222,7 +222,7 @@ def init_widgets_list():
             filename="~/.config/qtile/icons/python-white.png",
             scale="False",
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(
-                "./.config/rofi/bin/launcher_ribbon")}
+                ".local/bin/launcher")}
         ),
         widget.Sep(
             linewidth=0,
@@ -380,7 +380,7 @@ def init_widgets_list():
             foreground=colors[2],
             padding=15,
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(
-                "./.config/rofi/bin/powermenu")}
+                ".local/bin/powermenu")}
         )
     ]
     return widgets_list
