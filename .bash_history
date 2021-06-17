@@ -122,3 +122,7 @@ vim .bashrc
 c
 config status
 zsh
+neofetch
+ls
+xrdb ~/.Xresources
+neofetch
