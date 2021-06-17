@@ -126,3 +126,5 @@ neofetch
 ls
 xrdb ~/.Xresources
 neofetch
+c
+zsh

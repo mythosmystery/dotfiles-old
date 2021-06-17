@@ -9,6 +9,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlighting'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
+" Plug 'nekonako/xresources-nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
@@ -40,7 +41,7 @@ set t_Co=256
 let g:material_theme_style = 'palenight'
 colorscheme material
 
-let g:lightline = {'colorscheme': 'material_vim'}
+let g:lightline = {'colorscheme': 'material'}
 
 hi Normal guibg=NONE ctermbg=NONE
 

@@ -1,0 +1,113 @@
+!  ____ _____ 
+! |  _ \_   _|  Derek Taylor (DistroTube)
+! | | | || |    http://www.youtube.com/c/DistroTube
+! | |_| || |    http://www.gitlab.com/dwt1/ 
+! |____/ |_|  	
+
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+XTerm*renderFont: true
+XTerm*faceName: xft:MesloLGS NF, \
+                xft:JoyPixels:size=12, \
+                xft:Monospace:style=Medium:size=12   
+XTerm*faceSize: 13
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
+
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+URxvt*buffered: false
+URxvt.intensityStyles: false
+URxvt.font: xft:MesloLGS NF:size=12, \
+            xft:JoyPixels:size=12, \
+            xft:Monospace:style=Medium:size=12   
+URxvt.saveLines: 2000
+URxvt.scrollBar: false
+URxvt.cursorColor: white
+
+!! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.keysym.C-k:   font-size:increase
+URxvt.keysym.C-j:   font-size:decrease
+!! Matcher
+URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+!!clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
+
+
+! Palenight Xresources palette
+
+!! COLORS
+#define bg    #292d3e
+#define fg    #bfc7d5
+#define curs  #bfc7d5
+#define blk   #292d3e
+#define bblk  #676e95
+#define red   #f07178
+#define grn   #c3e88d
+#define ylw   #ffcb6b
+#define blu   #82aaff
+#define mag   #c792ea
+#define cyn   #89ddff
+#define wht   #bfc7d5
+#define bred  #f07178
+#define bgrn  #c3e88d
+#define bylw  #ffcb6b
+#define bblu  #82aaff
+#define bmag  #c792ea
+#define bcyn  #89ddff
+#define bwht  #959dcb
+ 
+*background:   bg
+*foreground:   fg
+*cursorColor:  curs
+ 
+*color0:      blk
+*color8:      bblk
+*color1:      red
+*color9:      bred
+*color2:      grn
+*color10:     bgrn
+*color3:      ylw
+*color11:     bylw
+*color4:      blu
+*color12:     bblu
+*color5:      mag
+*color13:     bmag
+*color6:      cyn
+*color14:     bcyn
+*color7:      wht
+*color15:     bwht
