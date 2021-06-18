@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+if pgrep -c mongo > 0
+	then
+		echo "stopping"
+		sudo systemctl stop mongodb
+else
+	echo "starting"
+	sudo systemctl start mongodb
+fi
