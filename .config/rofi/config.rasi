@@ -3,4 +3,5 @@
 configuration {
   show-icons:         true;
   icon-theme:         "Palenight";
+  font:							"MesloLGS 10";
 }
