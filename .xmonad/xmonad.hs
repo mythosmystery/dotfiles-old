@@ -72,26 +72,26 @@ myEmojiFont :: String
 myEmojiFont = "xft:JoyPixels:regular:size=9:antialias=true:hinting=true"
 
 myModMask :: KeyMask
-myModMask = mod1Mask        -- Sets modkey to super/windows key
+myModMask = mod4Mask        -- Sets modkey to super/windows key
 
 myTerminal :: String
-myTerminal = "tilix"    -- Sets default terminal
+myTerminal = "alacritty"    -- Sets default terminal
 
 myBrowser :: String
-myBrowser = "chromium "  -- Sets qutebrowser as browser
+myBrowser = "google-chrome-stable"  -- Sets qutebrowser as browser
 
 myEditor :: String
 --myEditor = "atom"  -- Sets emacs as editor
-myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
+myEditor = myTerminal ++ " -e nvim "    -- Sets vim as editor
 
 myBorderWidth :: Dimension
 myBorderWidth = 2           -- Sets border width for windows
 
 myNormColor :: String
-myNormColor   = "#282c34"   -- Border color of normal windows
+myNormColor   = "#292d3e"   -- Border color of normal windows
 
 myFocusColor :: String
-myFocusColor  = "#46d9ff"   -- Border color of focused windows
+myFocusColor  = "#c972ea"   -- Border color of focused windows
 
 altMask :: KeyMask
 altMask = mod4Mask          -- Setting this for use in xprompts
@@ -106,7 +106,8 @@ myStartupHook = do
           spawnOnce "picom -f &"
           spawnOnce "nm-applet &"
           spawnOnce "volumeicon &"
-          spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
+          spawnOnce "cbatticon &"
+          spawnOnce "~/.config/polybar/launch.sh"
           setWMName "XMonad"
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -316,20 +317,8 @@ myKeys =
         , ("M-S-q", io exitSuccess)  -- Quits xmonad
 
     -- Run Prompt
-        , ("M-S-<Return>", spawn "dmenu_run -i -p \"Run: \"") -- Dmenu
-
-    -- Other Prompts
-        , ("M-p c", spawn "/home/dt/dmscripts/dcolors")  -- pick color from our scheme
-        , ("M-p e", spawn "/home/dt/dmscripts/dmconf")   -- edit config files
-        , ("M-p i", spawn "/home/dt/dmscripts/dmscrot")  -- screenshots (images)
-        , ("M-p k", spawn "/home/dt/dmscripts/dmkill")   -- kill processes
-        , ("M-p m", spawn "/home/dt/dmscripts/dman")     -- manpages
-        , ("M-p o", spawn "/home/dt/dmscripts/dmqute")   -- open qutebrowser bookmarks, quickmarks and history
-        , ("M-p p", spawn "passmenu")                    -- passmenu
-        , ("M-p q", spawn "/home/dt/dmscripts/dmlogout") -- logout menu
-        , ("M-p r", spawn "/home/dt/dmscripts/dmred")    -- reddio (a reddit viewer)
-        , ("M-p s", spawn "/home/dt/dmscripts/dmsearch") -- search various search engines
-
+        , ("M-S-<Return>", spawn "~/.local/bin/launcher") -- Dmenu
+        , ("M-S-x", spawn "~/.local/bin/powermenu")
     -- Useful programs to have a keybinding for launch
         , ("M-<Return>", spawn (myTerminal))
         , ("M-b", spawn (myBrowser))
@@ -413,21 +402,7 @@ myKeys =
         , ("M-u l", spawn "mocp --next")
         , ("M-u h", spawn "mocp --previous")
         , ("M-u <Space>", spawn "mocp --toggle-pause")
-
-    -- Emacs (CTRL-e followed by a key)
-        , ("C-e e", spawn "emacsclient -c -a 'emacs'")                            -- start emacs
-        , ("C-e b", spawn "emacsclient -c -a 'emacs' --eval '(ibuffer)'")         -- list emacs buffers
-        , ("C-e d", spawn "emacsclient -c -a 'emacs' --eval '(dired nil)'")       -- dired emacs file manager
-        , ("C-e i", spawn "emacsclient -c -a 'emacs' --eval '(erc)'")             -- erc emacs irc client
-        , ("C-e m", spawn "emacsclient -c -a 'emacs' --eval '(mu4e)'")            -- mu4e emacs email client
-        , ("C-e n", spawn "emacsclient -c -a 'emacs' --eval '(elfeed)'")          -- elfeed emacs rss client
-        , ("C-e s", spawn "emacsclient -c -a 'emacs' --eval '(eshell)'")          -- eshell within emacs
-        , ("C-e t", spawn "emacsclient -c -a 'emacs' --eval '(mastodon)'")        -- mastodon within emacs
-        , ("C-e v", spawn "emacsclient -c -a 'emacs' --eval '(vterm nil)'") -- vterm within emacs
-        , ("C-e w", spawn "emacsclient -c -a 'emacs' --eval '(eww \"distrotube.com\")'") -- vterm within emacs
-        -- emms is an emacs audio player. I set it to auto start playing in a specific directory.
-        , ("C-e a", spawn "emacsclient -c -a 'emacs' --eval '(emms)' --eval '(emms-play-directory-tree \"~/Music/Non-Classical/70s-80s/\")'")
-
+   
     -- Multimedia Keys
         , ("<XF86AudioPlay>", spawn (myTerminal ++ "mocp --play"))
         , ("<XF86AudioPrev>", spawn (myTerminal ++ "mocp --previous"))
@@ -449,7 +424,7 @@ myKeys =
 main :: IO ()
 main = do
     -- Launching three instances of xmobar on their monitors.
-    xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc"
+    -- xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc"
     -- the xmonad, ya know...what the WM is named after!
     xmonad $ ewmh def
         { manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageDocks
@@ -471,16 +446,16 @@ main = do
         , borderWidth        = myBorderWidth
         , normalBorderColor  = myNormColor
         , focusedBorderColor = myFocusColor
-        , logHook = dynamicLogWithPP $ namedScratchpadFilterOutWorkspacePP $ xmobarPP
-                        { ppOutput = \x -> hPutStrLn xmproc x
-                        , ppCurrent = xmobarColor "#98be65" "" . wrap "[" "]"           -- Current workspace in xmobar
-                        , ppVisible = xmobarColor "#98be65" "" . clickable              -- Visible but not current workspace
-                        , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" "" . clickable -- Hidden workspaces in xmobar
-                        , ppHiddenNoWindows = xmobarColor "#c792ea" ""  . clickable     -- Hidden workspaces (no windows)
-                        , ppTitle = xmobarColor "#b3afc2" "" . shorten 60               -- Title of active window in xmobar
-                        , ppSep =  "<fc=#666666> <fn=1>|</fn> </fc>"                    -- Separators in xmobar
-                        , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"            -- Urgent workspace
-                        , ppExtras  = [windowCount]                                     -- # of windows current workspace
-                        , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
-                        }
+        -- , logHook = dynamicLogWithPP $ namedScratchpadFilterOutWorkspacePP $ xmobarPP
+        --                 { ppOutput = \x -> hPutStrLn xmproc x
+        --                 , ppCurrent = xmobarColor "#98be65" "" . wrap "[" "]"           -- Current workspace in xmobar
+        --                 , ppVisible = xmobarColor "#98be65" "" . clickable              -- Visible but not current workspace
+        --                 , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" "" . clickable -- Hidden workspaces in xmobar
+        --                 , ppHiddenNoWindows = xmobarColor "#c792ea" ""  . clickable     -- Hidden workspaces (no windows)
+        --                 , ppTitle = xmobarColor "#b3afc2" "" . shorten 60               -- Title of active window in xmobar
+        --                 , ppSep =  "<fc=#666666> <fn=1>|</fn> </fc>"                    -- Separators in xmobar
+        --                 , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"            -- Urgent workspace
+        --                 , ppExtras  = [windowCount]                                     -- # of windows current workspace
+        --                 , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
+        --                 }
         } `additionalKeysP` myKeys

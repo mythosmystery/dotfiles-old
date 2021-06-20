@@ -47,6 +47,9 @@
 		},
 		{
 			"path": ".config/i3"
+		},
+		{
+			"path": ".xmonad"
 		}
 	]
 }

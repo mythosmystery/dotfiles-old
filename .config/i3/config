@@ -36,7 +36,7 @@ floating_modifier $mod
 
 # start a $myTerm
 set $myTerm alacritty
-bindsym $mod+Return exec $myTerm
+bindsym $mod+Return exec $myTerm -e zsh
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -262,7 +262,6 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id lxsession
 exec --no-startup-id nitrogen --restore; sleep 1; picom --config ~/.config/picom/picom.conf
 exec --no-startup-id nm-applet
