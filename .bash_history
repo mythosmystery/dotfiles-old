@@ -128,3 +128,5 @@ xrdb ~/.Xresources
 neofetch
 c
 zsh
+search
+zsh

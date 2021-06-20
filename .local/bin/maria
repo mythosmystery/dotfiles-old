@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+if pgrep -c mariadb > 0
+	then 
+		echo "stopping"
+		sudo systemctl stop mariadb
+else
+	echo "starting"
+	sudo systemctl start mariadb
+fi

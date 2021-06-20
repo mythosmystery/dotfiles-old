@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+pikaur -Ss $1 > .searchTmp
+nvim .searchTmp
+rm .searchTmp
