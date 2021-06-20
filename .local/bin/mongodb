@@ -1,9 +1,8 @@
 #!/usr/bin/bash
-if pgrep -c mongo > 0
+pgrep -c mongo
+if pgrep -c "mongo" > 1
 	then
-		echo "stopping"
-		sudo systemctl stop mongodb
+		echo "running"
 else
-	echo "starting"
-	sudo systemctl start mongodb
+	echo "not running"
 fi
