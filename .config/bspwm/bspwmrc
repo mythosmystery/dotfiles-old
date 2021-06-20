@@ -69,3 +69,4 @@ bspc rule -a qBittorrent state=floating
 bspc rule -a qt5ct state=floating
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Plank layer=above manage=on border=off
+bspc rule -a Nitrogen state=floating
