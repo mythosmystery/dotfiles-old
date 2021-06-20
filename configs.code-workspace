@@ -44,6 +44,9 @@
 		},
 		{
 			"path": ".local/bin"
+		},
+		{
+			"path": ".config/i3"
 		}
 	]
 }
