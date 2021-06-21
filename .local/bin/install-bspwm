@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+sudo pacman -S git zsh fish neovim exa htop neofetch wget curl  man-db tmux pulseaudio
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance volumeicon
+sudo pacman -S bspwm sxhkd rofi plank 
+git clone https://aur.archlinux.org/pikaur.git $HOME/pikaur
+cd $HOME/pikaur
+makepkg -si
+cd ..
