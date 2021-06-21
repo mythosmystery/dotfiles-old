@@ -130,3 +130,5 @@ mod4 + c
 	code
 mod4 + shift + b
 	google-chrome-stable
+mod4 + shift + m
+	sudo thunar
