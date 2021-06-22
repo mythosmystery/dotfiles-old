@@ -130,3 +130,7 @@ c
 zsh
 search
 zsh
+tmux kill-server
+c
+tmux kill-server
+zsh
