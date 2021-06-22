@@ -16,6 +16,7 @@ picom -f &
 nitrogen --restore &
 ./.config/polybar/launch.sh
 plank &
+thunar --daemon &
 dunst &
 volumeicon &
 cbatticon &
