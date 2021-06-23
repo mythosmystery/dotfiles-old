@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+sudo pacman -Syyu
 sudo pacman -S --noconfirm git zsh fish neovim exa htop neofetch wget man-db tmux pulseaudio pacman-contrib
 sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance volumeicon nitrogen
 sudo pacman -S --noconfirm bspwm sxhkd rofi plank alacritty thunar qt5ct vlc xterm qbittorrent dunst scrot network-manager-applet nodejs npm
