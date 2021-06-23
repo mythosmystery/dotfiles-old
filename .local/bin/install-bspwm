@@ -10,9 +10,3 @@ pikaur -S --noconfirm polybar google-chrome visual-studio-code-bin zoom slack-de
 pikaur -S --noconfirm ttf-font-awesome ttf-meslo-nerd-font-powerlevel10k ttf-ubuntu-font-family ttf-roboto-mono ttf-icomoon-feather
 pikaur -S nerd-fonts-iosevka nerd-fonts-mononoki palenight-gtk-theme terminus-font qt5-styleplugins
 pikaur -S --noconfirm pamac-all insomnia mariadb mongodb-bin obs-studio
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> .bashrc
-source .bashrc
-echo ".cfg" >> .gitignore
-git clone --bare https://github.com/mythosmystery/dotfiles.git $HOME/.cfg
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} sudo rm -r {}
-config status
