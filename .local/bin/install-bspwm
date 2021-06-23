@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-sudo pacman -S git zsh fish neovim exa htop neofetch wget curl  man-db tmux pulseaudio pacman-contrib
-sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance volumeicon nitrogen
-sudo pacman -S bspwm sxhkd rofi plank alacritty thunar qt5ct vlc xterm qbittorrent dunst scrot network-manager-applet nodejs npm
+sudo pacman -S --noconfirm git zsh fish neovim exa htop neofetch wget man-db tmux pulseaudio pacman-contrib
+sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance volumeicon nitrogen
+sudo pacman -S --noconfirm bspwm sxhkd rofi plank alacritty thunar qt5ct vlc xterm qbittorrent dunst scrot network-manager-applet nodejs npm
 git clone https://aur.archlinux.org/pikaur.git $HOME/pikaur
 cd $HOME/pikaur
 makepkg -si
