@@ -25,6 +25,7 @@ nm-applet &
 #### MONITORS ####
 bspc monitor DP-1 -d 0 1 2 3 4 5 6 7 8 9
 bspc monitor DP-3 -d 0 1 2 3 4 5 6 7 8 9
+bspc monitor DVI-D-1 -d 0 1 2 3 4 5 6 7 8 9
 bspc monitor LVDS-1 -d 0 1 2 3 4 5 6 7 8 
 
 #### BSPWM configuration ####
@@ -71,3 +72,4 @@ bspc rule -a qt5ct state=floating
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Plank layer=above manage=on border=off
 bspc rule -a Nitrogen state=floating
+bspc rule -a Pavuacontrol state=floating
