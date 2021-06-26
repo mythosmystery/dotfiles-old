@@ -115,7 +115,7 @@ mod4 + {Left,Down,Up,Right}
 
 # terminal emulator
 mod4 + Return
-	alacritty -e zsh
+	alacritty
 mod4 + shift + Return
 	~/.local/bin/launcher
 mod4 + shift + x 

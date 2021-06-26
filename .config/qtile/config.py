@@ -22,7 +22,7 @@ myTerm = "alacritty"                             # My terminal of choice
 keys = [
     # The essentials
     Key([mod], "Return",
-        lazy.spawn(myTerm + " -e zsh"),
+        lazy.spawn(myTerm),
         desc='Launches My Terminal'
         ),
     Key([mod, "shift"], "Return",

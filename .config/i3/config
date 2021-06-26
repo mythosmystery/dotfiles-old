@@ -29,7 +29,7 @@ floating_modifier $mod
 
 # start a $myTerm
 set $myTerm alacritty
-bindsym $mod+Return exec $myTerm -e zsh
+bindsym $mod+Return exec $myTerm
 
 # kill focused window
 bindsym $mod+Shift+c kill
