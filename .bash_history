@@ -134,3 +134,5 @@ tmux kill-server
 c
 tmux kill-server
 zsh
+sudo pacman -S zip unzip rar unrar p7zip binutils xdg-utils
+sudo pacman -S zip unzip tar unrar p7zip binutils xdg-utils
