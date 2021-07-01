@@ -89,7 +89,7 @@ mod4 + shift + Return
 	~/.local/bin/launcher
 mod4 + shift + x 
 	~/.local/bin/powermenu
-mod4 + c
+mod4 + shift + c
 	code
 mod4 + shift + b
 	google-chrome-stable

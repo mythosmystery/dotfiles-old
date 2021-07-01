@@ -7,7 +7,7 @@
 killall -q plank
 sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
 picom -f &
-nitrogen --restore &
+~/.fehbg &
 ./.config/polybar/launch.sh
 plank &
 thunar --daemon &
