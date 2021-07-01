@@ -126,3 +126,20 @@ mod4 + shift + b
 	google-chrome-stable
 mod4 + shift + m
 	sudo thunar
+
+# SYSTEM KEYBINDINGS
+
+XF86MonBrightnessUp
+	blight set +5%
+XF86MonBrightnessDown
+	blight set -5%
+XF86AudioRaiseVolume
+	amixer -q set Master 5%+ unmute
+XF86AudioLowerVolume
+	amixer -q set Master 5%- unmute
+XF86AudioMute
+	amixer -q set Master toggle
+Print
+	gnome-screenshot -i
+mod4 + Print
+	gnome-screenshot -a
