@@ -1,8 +1,13 @@
 #!/usr/bin/bash
 sudo pacman -Syyu
 sudo pacman -S --noconfirm git zsh fish neovim exa htop neofetch wget man-db tmux pulseaudio pacman-contrib xarchiver
+<<<<<<< HEAD
 sudo pacman -S --noconfirm gnome gnome-tweaks gdm lxsession lxappearance volumeicon nitrogen
 sudo pacman -S --noconfirm bspwm sxhkd rofi plank alacritty thunar qt5ct vlc xterm qbittorrent dunst scrot network-manager-applet nodejs npm
+=======
+sudo pacman -S --noconfirm gnome gnome-tweaks gdm chrome-gnome-shell lxsession lxappearance volumeicon nitrogen
+sudo pacman -S --noconfirm bspwm sxhkd rofi plank alacritty thunar qt5ct vlc xterm qbittorrent dunst network-manager-applet nodejs npm
+>>>>>>> ca36c4c9a97c63874fedaa995a122a83fcee1db3
 git clone https://aur.archlinux.org/pikaur.git $HOME/pikaur
 cd $HOME/pikaur
 makepkg -si
