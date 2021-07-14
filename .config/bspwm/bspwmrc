@@ -14,7 +14,6 @@ picom -f &
 ~/.fehbg &
 ./.config/polybar/launch.sh
 plank &
-lxsession &
 dunst &
 volumeicon &
 cbatticon &
