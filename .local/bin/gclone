@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+git clone git@github.com:mythosmystery/$1.git
