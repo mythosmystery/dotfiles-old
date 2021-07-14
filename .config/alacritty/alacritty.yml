@@ -10,8 +10,8 @@ window:
    padding:
       x: 5
       y: 5
-#background_opacity: 0.6
-background_opacity: 1.0
+background_opacity: 0.8
+#background_opacity: 1.0
 colors:
    # Default colors
    primary:
