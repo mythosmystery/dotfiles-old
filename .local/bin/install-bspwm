@@ -1,11 +1,11 @@
 #!/usr/bin/bash
 sudo pacman -Syyu
 sudo pacman -S --noconfirm git zsh fish neovim exa htop neofetch wget man-db tmux pulseaudio pacman-contrib xarchiver
-sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance volumeicon nitrogen
+sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession lxappearance volumeicon
 sudo pacman -S --noconfirm bspwm sxhkd rofi plank alacritty thunar qt5ct vlc xterm qbittorrent dunst gnome-screenshot network-manager-applet nodejs npm
 git clone https://aur.archlinux.org/pikaur.git $HOME/pikaur
 cd $HOME/pikaur
 makepkg -si
 cd ..
-pikaur -S --noconfirm polybar google-chrome visual-studio-code-bin zoom slack-desktop appimagelauncher vim-plug blight betterlockscreen picom-ibhagwan-git zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k starship gtk-theme-framework qt5-styleplugins
+pikaur -S --noconfirm polybar google-chrome visual-studio-code-bin zoom slack-desktop appimagelauncher vim-plug blight betterlockscreen picom-ibhagwan-git zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k starship palenight-gtk-theme qt5-styleplugins
 pikaur -S --noconfirm pamac-all insomnia mariadb mongodb-bin obs-studio

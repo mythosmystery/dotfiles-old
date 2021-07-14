@@ -5,6 +5,7 @@
 
 #### AUTOSTART ####
 killall -q plank
+xrdb ~/.Xresources
 sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
 picom -f &
 ~/.fehbg &
