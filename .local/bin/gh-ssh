@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+ssh-keygen -t ed25519 -C "axiysfire@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+xclip -selection clipboard < ~/.ssh/id_ed25519.pub
+echo "all done! key copied to clipboard"
