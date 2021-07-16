@@ -184,3 +184,9 @@ c
 ls
 xrdb ~/.Xresources
 ls
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git clone --bare git@github.com:mythosmystery/dotfiles.git $HOME/.cfg
+config checkout
+rm .bash_history
+rm .bashrc
+config checkout
