@@ -3,22 +3,24 @@
 # https://github.com/baskerville/sxhkd
 # https://github.com/baskerville/bspwm
 
+#SYSTEM STUFF
+xrdb ~/.Xresources
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #### AUTOSTART ####
 killall -q plank
 sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
 picom -f &
 ~/.fehbg &
-./.config/polybar/launch.sh
+./.config/polybar/launch.sh 
 plank &
-thunar --daemon &
 dunst &
 volumeicon &
 cbatticon &
 nm-applet &
 
 #### MONITORS ####
-bspc monitor DP-1 -d 0 1 2 3 4 5 6 7 8 9
-bspc monitor DP-3 -d 0 1 2 3 4 5 6 7 8 9
+bspc monitor DisplayPort-0 -d 0 1 2 3 4 5 6 7 8 9
+bspc monitor DisplayPort-2 -d 0 1 2 3 4 5 6 7 8 9
 bspc monitor DVI-D-1 -d 0 1 2 3 4 5 6 7 8 9
 bspc monitor LVDS-1 -d 0 1 2 3 4 5
 

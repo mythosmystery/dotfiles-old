@@ -136,3 +136,57 @@ tmux kill-server
 zsh
 sudo pacman -S zip unzip rar unrar p7zip binutils xdg-utils
 sudo pacman -S zip unzip tar unrar p7zip binutils xdg-utils
+git clone https://aur.archlinux.org/pikaur.git
+cd pikaur/
+clear
+makepkg -si
+clear
+sudo pacman -Syu
+clear
+pikaur -S google-chrome
+clear
+cd
+c
+clear
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+c
+clear
+vim github-ssh
+clear
+ssh-keygen -t ed25519 -C "axiysfire@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+xclip -selection clipboard < ~/.ssh/id_ed25519.pub
+clear
+config status
+c
+clear
+git clone --bare git@github.com:mythosmystery/dotfiles.git $HOME/.cfg
+config checkout
+rm .bashrc
+config checkout
+nano .local/bin/install-bspwm-gnome
+clear
+config status
+clear
+git clone --bare git@github.com:mythosmystery/dotfiles.git $HOME/.cfg
+config checkout
+rm .bashrc
+config checkout
+zsh
+vim .local/bin/install-bspwm
+cp .local/bin/install-bspwm .local/bin/install-bspwm-gnome
+vi .local/bin/install-bspwm-gnome
+chmod +x .local/bin/install-bspwm-gnome
+nano .local/bin/install-bspwm-gnome
+install-bspwm-gnome
+c
+ls
+xrdb ~/.Xresources
+ls
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git clone --bare git@github.com:mythosmystery/dotfiles.git $HOME/.cfg
+config checkout
+rm .bash_history
+rm .bashrc
+config checkout
