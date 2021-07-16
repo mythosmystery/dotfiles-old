@@ -99,9 +99,9 @@ mod4 + shift + t
 # SYSTEM KEYBINDINGS
 
 XF86MonBrightnessUp
-	blight set +5%
+	blight set +3%
 XF86MonBrightnessDown
-	blight set -5%
+	blight set -3%
 XF86AudioRaiseVolume
 	amixer -q set Master 5%+ unmute
 XF86AudioLowerVolume
