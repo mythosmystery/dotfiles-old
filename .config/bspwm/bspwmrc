@@ -5,9 +5,9 @@
 
 #SYSTEM STUFF
 xrdb ~/.Xresources
+xsetroot -cursor_name left_ptr
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #### AUTOSTART ####
-killall -q plank
 sxhkd -c "$HOME/.config/sxhkd/sxhkdrc" &
 picom -f &
 ~/.fehbg &

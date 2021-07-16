@@ -190,3 +190,4 @@ config checkout
 rm .bash_history
 rm .bashrc
 config checkout
+neofetch
