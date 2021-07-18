@@ -31,9 +31,6 @@
 			"path": ".config/polybar"
 		},
 		{
-			"path": "Downloads/dotfiles"
-		},
-		{
 			"path": ".themes"
 		},
 		{

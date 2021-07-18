@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 pgrep -c mongo
-if pgrep -c "mongo" > 1
+if pgrep -c "mongo"
 	then
 		echo "running"
 else

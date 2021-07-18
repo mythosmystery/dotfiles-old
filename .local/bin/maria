@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-if pgrep -c mariadb > 0
+if pgrep -c mariadb
 	then 
 		echo "stopping"
 		sudo systemctl stop mariadb
