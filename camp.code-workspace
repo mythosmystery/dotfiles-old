@@ -26,6 +26,18 @@
 		},
 		{
 			"path": "Documents/project-03-dev-crowd"
+		},
+		{
+			"path": "Documents/book-search"
+		},
+		{
+			"path": "Documents/mern-template"
+		},
+		{
+			"path": "Documents/weather-forecast"
+		},
+		{
+			"path": "Documents/weather-react"
 		}
 	],
 	"settings": {

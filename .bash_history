@@ -191,3 +191,4 @@ rm .bash_history
 rm .bashrc
 config checkout
 neofetch
+npm install apollo-express-server@^2

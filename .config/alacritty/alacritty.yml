@@ -10,8 +10,8 @@ window:
    padding:
       x: 5
       y: 5
-background_opacity: 0.8
-#background_opacity: 1.0
+#background_opacity: 0.8
+background_opacity: 1.0
 colors:
    # Default colors
    primary:
@@ -39,3 +39,9 @@ colors:
       magenta: '0xe1acff'
       cyan: '0xa3f7ff'
       white: '0xffffff'
+key_bindings:
+   - { key: C, mods: Control|Shift, action: Copy }
+   - { key: V, mods: Control|Shift, action: Paste }
+   - { key: Equals, mods: Control, action: IncreaseFontSize }
+   - { key: Minus, mods: Control, action: DecreaseFontSize }
+   - { key: Key0, mods: Control, action: ResetFontSize }
