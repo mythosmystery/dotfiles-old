@@ -192,3 +192,32 @@ rm .bashrc
 config checkout
 neofetch
 npm install apollo-express-server@^2
+npm install apollo-express-server@^2
+cd ..
+gclone interview-prep
+cd interview-prep/
+c
+node index.js
+npm start
+gitsend "updated profile picture"
+c
+npm run deploy
+gitsend "updated readme with screenshot"
+c
+node index.js
+cd interview-prep/
+npm start
+gitsend "updated profile picture"
+npm run deploy
+gitsend "updated readme with screenshot"
+gitsend "added many new problems"
+gitsend "updated diffArray"
+gitsend "regex problems done"
+node
+c
+++++++++++++++++++++++++++++++++++++++++++++++***********************************3
+node index.js
+node index.js | jq
+node index.js
+gitsend "added map difference"
+c

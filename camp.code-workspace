@@ -25,9 +25,6 @@
 			"path": "Documents/react-portfolio"
 		},
 		{
-			"path": "Documents/project-03-dev-crowd"
-		},
-		{
 			"path": "Documents/book-search"
 		},
 		{
@@ -38,6 +35,18 @@
 		},
 		{
 			"path": "Documents/weather-react"
+		},
+		{
+			"path": "Documents/bug-tracker"
+		},
+		{
+			"path": "Documents/dev-crowd"
+		},
+		{
+			"path": "Documents/notes-web-frontend"
+		},
+		{
+			"path": "Documents/notes-backend"
 		}
 	],
 	"settings": {
