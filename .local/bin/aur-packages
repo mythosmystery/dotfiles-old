@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-pikaur -S --noconfirm polybar google-chrome visual-studio-code-bin zoom slack-desktop palenight-gtk-theme appimagelauncher vim-plug blight betterlockscreen picom-ibhagwan-git zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k starship
-pikaur -S --noconfirm pamac-all insomnia mariadb mongodb-bin obs-studio qt5-styleplugins
