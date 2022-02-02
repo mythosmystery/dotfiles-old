@@ -1,5 +1,5 @@
 echo "update pacman and install pikaur"
-sudo pacman -Syyu --noconfirm gcc
+sudo pacman -Syyu --noconfirm gcc base-devel
 git clone https://aur.archlinux.org/paru.git $HOME/paru
 cd $HOME/paru
 makepkg -si
