@@ -1,7 +1,7 @@
-sudo apt update
-sudo apt upgrade
+sudo apt -y update
+sudo apt -y upgrade
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-sudo apt install zsh tmux gcc neovim
+sudo apt -y install zsh tmux gcc neovim
 cargo install exa
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
