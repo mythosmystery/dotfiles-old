@@ -6,7 +6,7 @@
 curl https://raw.githubusercontent.com/mythosmystery/dotfiles/ubuntu/pretty-cli-installer.sh | bash
 ```
 
-## Installation with Git Dotfiles
+## Installation with Git Dotfiles (for using custom config)
 
 ```
 curl https://raw.githubusercontent.com/mythosmystery/dotfiles/ubuntu/install-cli.sh -o install.sh
