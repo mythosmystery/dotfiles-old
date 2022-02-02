@@ -1,3 +1,5 @@
+sudo apt update
+sudo apt upgrade
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt install zsh tmux gcc neovim
 cargo install exa
