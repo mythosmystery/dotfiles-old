@@ -20,6 +20,5 @@ sudo apt -y update
 sudo apt -y install gh
 bash -c "gh auth login"
 gh repo clone dotfiles ~/.cfg -- --bare
-rm .bashrc .zshrc
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-config checkout ubuntu
+rm .bashrc .zshrc .config/fish/fish_variables
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout ubuntu
