@@ -1,6 +1,7 @@
 sudo apt -y update
 sudo apt -y upgrade
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
 sudo apt -y install zsh tmux gcc neovim
 cargo install exa
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
