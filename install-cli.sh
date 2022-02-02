@@ -1,3 +1,4 @@
+sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt -y update
 sudo apt -y upgrade
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
