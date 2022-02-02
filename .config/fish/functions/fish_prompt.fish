@@ -1,34 +1,38 @@
-# Defined interactively
-function fish_prompt --description 'Write out the prompt'
-    set -l last_status $status
+function fish_prompt
+end
 
-    # User
-    set_color $fish_color_user
-    echo -n $USER
-    set_color normal
+status is-interactive || exit
 
-    echo -n '@'
+_tide_remove_unusable_items
 
-    # Host
-    set_color $fish_color_host
-    echo -n (prompt_hostname)
-    set_color normal
+# The first element in $$_tide_prompt_var is right prompt
+# All remaining ones are 'left' prompt (also upper right in 2-line prompts)
+set -g _tide_prompt_var _tide_prompt_$fish_pid
 
-    echo -n ':'
+function _tide_refresh_prompt --on-variable $_tide_prompt_var
+    set -g _tide_self_repainting # prevents us from creating a second background job
+    commandline --function repaint
+end
 
-    # PWD
-    set_color $fish_color_cwd
-    echo -n (prompt_pwd)
-    set_color normal
+function fish_prompt
+    _tide_last_status=$status _tide_last_pipestatus=$pipestatus if not set -e _tide_self_repainting
+        jobs --query
+        fish --command "_tide_jobs_status=$status CMD_DURATION=$CMD_DURATION COLUMNS=$COLUMNS \
+            fish_bind_mode=$fish_bind_mode set -U $_tide_prompt_var (_tide_prompt)" &
+        builtin disown
 
-    __terlar_git_prompt
-    fish_hg_prompt
-    echo
-
-    if not test $last_status -eq 0
-        set_color $fish_color_error
+        command kill $_tide_last_pid 2>/dev/null
+        set -g _tide_last_pid $last_pid
     end
 
-    echo -n ' >'
-    set_color normal
+    test "$tide_prompt_add_newline_before" = true && echo
+    string unescape $$_tide_prompt_var[1][2..]
+end
+
+function fish_right_prompt
+    string unescape $$_tide_prompt_var[1][1]
+end
+
+function _tide_on_fish_exit --on-event fish_exit
+    set -e $_tide_prompt_var
 end
