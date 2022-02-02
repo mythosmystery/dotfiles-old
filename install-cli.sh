@@ -19,7 +19,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt -y update
 sudo apt -y install gh
-gh auth login
+bash -c "gh auth login"
 gh repo clone dotfiles ~/.cfg -- --bare
 rm .bashrc .zshrc
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
