@@ -1,9 +1,9 @@
 sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt -y update
 sudo apt -y upgrade
+sudo apt -y install zsh tmux gcc neovim vifm fish neofetch
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 . "$HOME/.cargo/env"
-sudo apt -y install zsh tmux gcc neovim vifm fish neofetch
 cargo install exa
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
