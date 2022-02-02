@@ -1,3 +1,6 @@
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install -y wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
