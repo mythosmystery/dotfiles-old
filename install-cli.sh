@@ -1,3 +1,4 @@
+echo "update pacman and install pikaur"
 sudo pacman -Syyu
 git clone https://aur.archlinux.org/pikaur.git $HOME/pikaur
 cd $HOME/pikaur
@@ -8,4 +9,4 @@ pikaur -S --noconfirm google-chrome visual-studio-code-bin appimagelauncher vim-
 gh auth login
 gh repo clone dotfiles ~/.cfg -- --bare
 rm .zshrc .bashrc
-/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout ubuntu
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
