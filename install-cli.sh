@@ -2,7 +2,7 @@ sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install zsh tmux gcc neovim vifm fish neofetch git
-curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly
+curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly --profile default
 . "$HOME/.cargo/env"
 cargo install exa
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
