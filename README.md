@@ -1,6 +1,12 @@
 # My Dotfiles for ubuntu
 
-## Installation
+## Installation with my Dotfiles
+
+```
+curl https://raw.githubusercontent.com/mythosmystery/dotfiles/ubuntu/pretty-cli-installer.sh | bash
+```
+
+## Installation with Git Dotfiles
 
 ```
 curl https://raw.githubusercontent.com/mythosmystery/dotfiles/ubuntu/install-cli.sh -o install.sh
@@ -8,7 +14,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Then install gui apps (VS Code, Chrome, etc...)
+## Install gui apps (VS Code, Chrome, etc...)
 
 ```
 curl https://raw.githubusercontent.com/mythosmystery/dotfiles/ubuntu/install-gui.sh | bash
