@@ -1,6 +1,6 @@
 # My Dotfiles for ubuntu
 
-## Installation with my Dotfiles
+## Installation with my Dotfiles (default config)
 
 ```
 curl https://raw.githubusercontent.com/mythosmystery/dotfiles/ubuntu/pretty-cli-installer.sh | bash
