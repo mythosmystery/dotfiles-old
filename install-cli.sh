@@ -1,7 +1,7 @@
 sudo apt-add-repository ppa:fish-shell/release-3 -y
 sudo apt -y update
 sudo apt -y upgrade
-sudo apt -y install zsh tmux gcc neovim vifm fish neofetch git openssh
+sudo apt -y install zsh tmux gcc neovim vifm fish neofetch git
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 . "$HOME/.cargo/env"
 cargo install exa
