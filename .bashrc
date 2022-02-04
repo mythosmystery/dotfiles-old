@@ -26,6 +26,10 @@ bind -m vi-insert 'Control-l: clear-screen'
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
 ### PROMPT
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
