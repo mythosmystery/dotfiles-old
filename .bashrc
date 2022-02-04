@@ -1,220 +1,118 @@
-### EXPORT
-export TERM="xterm-256color"                      # getting proper colors
-export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
-export ALTERNATE_EDITOR=""                        # setting for emacsclient
-export EDITOR="nvim"              # $EDITOR use Emacs in terminal
-export VISUAL="nvim"           # $VISUAL use Emacs in GUI mode
-
-### SET MANPAGER
-### Uncomment only one of these!
-
-### "bat" as manpager
-#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-### "vim" as manpager
-# export MANPAGER='/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
-
-### "nvim" as manpager
-export MANPAGER="nvim -c 'set ft=man' -"
-
-### SET VI MODE ###
-# Comment this line out to enable default emacs-like bindings
-set -o vi
-bind -m vi-command 'Control-l: clear-screen'
-bind -m vi-insert 'Control-l: clear-screen'
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+# Enable the subsequent settings only in interactive sessions
+case $- in
+  *i*) ;;
+    *) return;;
 esac
 
-### PROMPT
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
+# Path to your oh-my-bash installation.
+export OSH=/home/florida/.oh-my-bash
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-bash is loaded.
+OSH_THEME="powerline"
 
-### PATH
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
-fi
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-if [ -d "$HOME/Applications" ] ;
-  then PATH="$HOME/Applications:$PATH"
-fi
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-if [ -d "$HOME/.config/rofi/bin" ] ;
-  then PATH="$HOME/.config/rofi/bin:$PATH"
-fi
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_OSH_DAYS=13
 
-### CHANGE TITLE OF TERMINALS
-case ${TERM} in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-        ;;
-  screen*)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-    ;;
-esac
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-#ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-### ARCHIVE EXTRACTION
-# usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-### ALIASES ###
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-# root privileges
-alias doas="doas --"
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# navigation
-up () {
-  local d=""
-  local limit="$1"
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
 
-  # Default to limit of 1
-  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
-    limit=1
-  fi
+# Would you like to use another custom folder than $OSH/custom?
+# OSH_CUSTOM=/path/to/new-custom-folder
 
-  for ((i=1;i<=limit;i++)); do
-    d="../$d"
-  done
+# Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
+# Custom completions may be added to ~/.oh-my-bash/custom/completions/
+# Example format: completions=(ssh git bundler gem pip pip3)
+# Add wisely, as too many completions slow down shell startup.
+completions=(
+  git
+  composer
+  ssh
+)
 
-  # perform cd. Show error if cd fails
-  if ! cd "$d"; then
-    echo "Couldn't go up $limit dirs.";
-  fi
-}
+# Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
+# Custom aliases may be added to ~/.oh-my-bash/custom/aliases/
+# Example format: aliases=(vagrant composer git-avh)
+# Add wisely, as too many aliases slow down shell startup.
+aliases=(
+  general
+)
 
-# vim and emacs
-alias vim="nvim"
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
+# Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  bashmarks
+  nvm
+)
 
-alias c="clear"
+# Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
+# Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
+# Example format: 
+#  if [ "$DISPLAY" ] || [ "$SSH" ]; then
+#      plugins+=(tmux-autoattach)
+#  fi
 
-# Changing "ls" to "exa"
-alias ls='exa -l --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a | egrep "^\."'
+source "$OSH"/oh-my-bash.sh
 
-# pacman and yay
-alias pacsyu='sudo pacman -Syyu'                 # update only standard pkgs
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'  # remove orphaned packages
+# User configuration
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# get fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# Colorize grep output (good for log files)
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# adding flags
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
-alias vifm='./.config/vifm/scripts/vifmrun'
-alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
-alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-## get top process eating memory
-alias psmem='ps auxf | sort -nr -k 4'
-alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-
-## get top process eating cpu ##
-alias pscpu='ps auxf | sort -nr -k 3'
-alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
-
-# Merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
-
-# gpg encryption
-# verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-# receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
-
-
-# switch between shells
-# I do not recommend switching default SHELL from bash.
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
-
-# bare git repo alias for dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
-
-# termbin
-alias tb="nc termbin.com 9999"
-
-
-### RANDOM COLOR SCRIPT ###
-# Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
-# Or install it from the Arch User Repository: shell-color-scripts
-
-### SOURCING BROOT ###
-
-### BASH INSULTER ###
-if [ -f /etc/bash.command-not-found ]; then
-    . /etc/bash.command-not-found
-fi
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Set personal aliases, overriding those provided by oh-my-bash libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-bash
+# users are encouraged to define aliases within the OSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
+alias ls=exa
+alias la='exa -la'
+alias ll='exa -l'
