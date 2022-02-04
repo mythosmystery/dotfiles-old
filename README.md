@@ -9,5 +9,5 @@ chmod +x install.sh
 
 ## Installation with Default Configs
 ```
-curl https://raw.githubusercontent.com/mythosmystery/dotfiles/main/installer.sh
+curl https://raw.githubusercontent.com/mythosmystery/dotfiles/main/installer.sh | bash
 ```
