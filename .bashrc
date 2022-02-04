@@ -1,5 +1,5 @@
 ### EXPORT
-export TERM="alacritty"                      # getting proper colors
+export TERM="xterm-256color"                      # getting proper colors
 export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 export ALTERNATE_EDITOR=""                        # setting for emacsclient
 export EDITOR="nvim"              # $EDITOR use Emacs in terminal
