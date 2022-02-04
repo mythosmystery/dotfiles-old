@@ -13,6 +13,8 @@ sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db neovim tmux pa
 
 echo "install aur packages"
 paru -S --noconfirm google-chrome visual-studio-code-bin vim-plug zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
 gh auth login
 
 echo "clone dotfiles"
