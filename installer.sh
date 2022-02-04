@@ -15,7 +15,7 @@ echo "install aur packages"
 paru -S --noconfirm google-chrome visual-studio-code-bin vim-plug zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k
 
 echo "clone dotfiles"
-git clone https://github.com/mythosmystery/dotfiles.git ~/.cfg -- --bare
+git clone https://github.com/mythosmystery/dotfiles.git ~/.cfg --bare
 rm .bashrc
 /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
 
