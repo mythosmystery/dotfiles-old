@@ -5,7 +5,7 @@ rustup install stable
 echo "install paru"
 git clone https://aur.archlinux.org/paru.git $HOME/paru
 cd $HOME/paru
-makepkg -si
+makepkg -si --noconfirm
 cd $HOME
 
 echo "install main repo packages"
