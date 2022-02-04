@@ -26,6 +26,7 @@ bind -m vi-insert 'Control-l: clear-screen'
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 ### PATH
 if [ -d "$HOME/.bin" ] ;
