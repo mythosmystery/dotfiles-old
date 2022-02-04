@@ -101,6 +101,7 @@ alias lg='exa -lT --git-ignore --git'
 alias lgi='exa -lT --git-ignore --git --icons'
 alias lt='exa -lTL 2'
 alias lti='exa -lTL 2 --icons'
+alias vim=nvim
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
