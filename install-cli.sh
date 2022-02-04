@@ -5,8 +5,8 @@ git clone https://aur.archlinux.org/paru.git $HOME/paru
 cd $HOME/paru
 makepkg -si
 cd $HOME
-sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db tmux pacman-contrib xclip lxappearance-gtk3 github-cli alacritty
-paru -S --noconfirm google-chrome visual-studio-code-bin appimagelauncher vim-plug zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k starship palenight-gtk-theme
+sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db tmux pacman-contrib xclip github-cli alacritty
+paru -S --noconfirm google-chrome visual-studio-code-bin vim-plug zsh-autosuggestions zsh-syntax-highlighting-git zsh-theme-powerlevel10k
 gh auth login
 gh repo clone dotfiles ~/.cfg -- --bare
 rm .zshrc .bashrc
