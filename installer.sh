@@ -9,7 +9,7 @@ makepkg -si --noconfirm
 cd $HOME
 
 echo "install main repo packages"
-sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db neovim tmux pacman-contrib xclip github-cli alacritty
+sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db neovim tmux pacman-contrib xclip github-cli alacritty z
 
 echo "install aur packages"
 paru -S --noconfirm google-chrome visual-studio-code-bin vim-plug
