@@ -16,7 +16,7 @@ paru -S --noconfirm google-chrome visual-studio-code-bin vim-plug zsh-autosugges
 gh auth login
 
 echo "clone dotfiles"
-gh repo clone dotfiles ~/.cfg --bare
+gh repo clone dotfiles ~/.cfg -- --bare
 rm .bashrc
 /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
 
