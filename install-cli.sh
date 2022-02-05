@@ -18,7 +18,7 @@ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -38,5 +38,9 @@ echo "clone dotfiles repo"
 gh repo clone dotfiles ~/.cfg -- --bare
 rm .bashrc .zshrc .config/fish/fish_variables
 /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout ubuntu
+
+echo "git config"
+git config --global user.name "Florida"
+git config --global user.email "axiysfire@gmail.com"
 
 echo "All done!"
