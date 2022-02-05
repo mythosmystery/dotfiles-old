@@ -30,5 +30,5 @@ echo "clone dotfiles repo"
 git clone https://github.com/mythosmystery/dotfiles.git ~/.cfg --bare
 rm .bashrc .zshrc .config/fish/fish_variables
 /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout ubuntu
-
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --global status.showUntrackedFiles no
 echo "All done!"

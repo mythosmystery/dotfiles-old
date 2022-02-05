@@ -43,5 +43,6 @@ rm .bashrc .zshrc .config/fish/fish_variables
 echo "git config"
 git config --global user.name "Florida"
 git config --global user.email "axiysfire@gmail.com"
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --global status.showUntrackedFiles no
 
 echo "All done!"
