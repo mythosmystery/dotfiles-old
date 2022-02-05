@@ -59,7 +59,7 @@ fi
 alias ll='exa -alF'
 alias la='exa -la'
 alias l='exa'
-
+alias vim=nvim
 alias c='clear'
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
