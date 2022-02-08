@@ -21,7 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'drewtempelmeyer/palenight.vim'
 
-" Plug 'ryanoasis/vim-devicons' "Icons for filetypes
+Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
 Plug 'vim-airline/vim-airline-themes' "Applicable themes
 Plug 'ap/vim-css-color' "  color name highlighter
