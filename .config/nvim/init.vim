@@ -5,7 +5,7 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlighting'
+Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'kaicataldo/material.vim', {'branch': 'main'}
