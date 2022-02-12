@@ -3,7 +3,7 @@ sudo pacman -Syyu --noconfirm base-devel rustup
 rustup install stable
 
 echo "install main repo packages"
-sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db neovim tmux pacman-contrib xclip github-cli z
+sudo pacman -S --noconfirm zsh fish exa htop git neofetch wget man-db neovim tmux pacman-contrib xclip github-cli z
 
 echo "install zsh plugins"
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
