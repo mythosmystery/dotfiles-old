@@ -2,17 +2,10 @@ echo "update pacman and install rust"
 sudo pacman -Syyu --noconfirm base-devel rustup
 rustup install stable
 
-echo "install paru"
-git clone https://aur.archlinux.org/paru.git $HOME/paru
-cd $HOME/paru
-makepkg -si --noconfirm
-cd $HOME
-
 echo "install main repo packages"
-sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db neovim tmux pacman-contrib xclip github-cli alacritty z
+sudo pacman -S --noconfirm zsh fish exa htop neofetch wget man-db neovim tmux pacman-contrib xclip github-cli z
 
-echo "install aur packages"
-paru -S --noconfirm google-chrome visual-studio-code-bin vim-plug
+echo "install zsh plugins"
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
