@@ -96,6 +96,8 @@ element {
 element-icon {
     size:                           49px;
     border:                         0px;
+    background-color: inherit;
+    text-color: inherit;
 }
 
 element-text {
@@ -103,6 +105,8 @@ element-text {
     horizontal-align:               0.5;
     vertical-align:                 0.5;
     margin:                         0.5% 1% 0% 1%;
+    background-color: inherit;
+    text-color: inherit;
 }
 
 element normal.urgent,

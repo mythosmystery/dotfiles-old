@@ -1,8 +1,0 @@
-#!/usr/bin/bash
-pgrep -c mongo
-if pgrep -c "mongo"
-	then
-		echo "running"
-else
-	echo "not running"
-fi
