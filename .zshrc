@@ -101,6 +101,7 @@ alias lgi='exa -lT --git-ignore --git --icons'
 alias lt='exa -lTL 2'
 alias lti='exa -lTL 2 --icons'
 alias vim=nvim
+alias dj='python3 manage.py'
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -129,3 +130,4 @@ alias vim=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export GOPATH=
